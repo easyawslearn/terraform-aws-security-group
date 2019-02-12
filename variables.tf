@@ -6,3 +6,7 @@ variable "region" {
 variable "vpc_id" {
   description = "specify the vpc id in which you want to assign security group"
 }
+variable "security_group_name" {
+  default = "webserver_sg"
+  description = "Name for the security group"
+}

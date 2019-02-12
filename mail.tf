@@ -4,7 +4,7 @@ provider "aws" {
 
 
 resource "aws_security_group" "allow_all" {
-  name        = "instance_sg"
+  name        = "${var.security_group_name}"
   description = "Allow all inbound traffic for security group"
   vpc_id      = "${var.vpc_id}"
 
