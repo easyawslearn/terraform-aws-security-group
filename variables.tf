@@ -21,9 +21,11 @@ variable "egress_prefix_list" {
 variable "ingress_from_port" {
   default = 80
 }
+
 variable "ingress_to_port" {
   default = 80
 }
+
 variable "ingress_protocol" {
   default = "tcp"
 }
