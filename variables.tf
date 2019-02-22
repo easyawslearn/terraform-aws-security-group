@@ -13,7 +13,7 @@ variable "security_group_name" {
   description = "Name for the security group"
 }
 
-variable "egress_prefix_list" {
+variable "ingress_prefix_list" {
   type    = "list"
   default = [""]
 }
@@ -28,4 +28,21 @@ variable "ingress_to_port" {
 
 variable "ingress_protocol" {
   default = "tcp"
+}
+
+variable "egress_from_port" {
+  default = 0
+}
+
+variable "egress_to_port" {
+  default = 0
+}
+
+variable "egress_protocol" {
+  default = "-1"
+}
+
+variable "egress_prefix_list" {
+  type    = "list"
+  default = [""]
 }
