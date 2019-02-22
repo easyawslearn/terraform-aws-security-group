@@ -27,9 +27,9 @@ resource "aws_security_group" "allow_all" {
   }
 
   egress {
-    from_port       = 0
-    to_port         = 0
-    protocol        = "-1"
+    from_port       = "${local.egress_from_port}"
+    to_port         = "${local.egress_to_port}"
+    protocol        = "${local.egress_protocol}"
   //  cidr_blocks     = ["0.0.0.0/0"]
     security_groups = ["${var.egress_prefix_list}"]
   }
